@@ -1,0 +1,13 @@
+import random
+print(random.random())
+
+print(random.random() * 100)
+
+if random.random() > 0.5:
+    print("Heads")
+
+values = [random.random() for _ in range(3)]
+print(values)
+
+probability = random.random()
+print(f"Chance: {round(probability, 2)}")
