@@ -1,0 +1,14 @@
+import random
+
+print(random.random())
+
+print(random.randint(1, 10))
+
+items = ["Apple", "Banana", "Cherry"]
+print(random.choice(items))
+
+numbers = [1, 2, 3, 4, 5]
+random.shuffle(numbers)
+print(numbers)
+
+print(random.randrange(1, 100, 5))
