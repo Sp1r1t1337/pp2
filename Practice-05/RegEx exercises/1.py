@@ -1,6 +1,8 @@
 import re
 def match_a_zero_plus_b(text):
-    pattern = r'ab*'
-    if re.search(pattern, text):
+    if re.fullmatch(r'ab*', text):
         return "Found a match!"
     return "No match found."
+
+txt = input(str("Enter string: "))
+print(match_a_zero_plus_b(txt))
