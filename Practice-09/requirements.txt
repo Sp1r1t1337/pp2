@@ -1,0 +1,5 @@
+echo "pygame>=2.0.0" > requirements.txt
+
+git add .
+git commit -m "Add Practice7 - Pygame games: Mickey's clock, music player, moving ball"
+git push origin main
