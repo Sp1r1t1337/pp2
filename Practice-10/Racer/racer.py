@@ -66,4 +66,32 @@ all_sprites.add(P1)
 all_sprites.add(E1)
 
 INC_SPEED = pygame.USEREVENT + 1
-pygame.time.
+pygame.time.set_timer(INC_SPEED, 1000)
+
+while True:
+    for event in pygame.event.get():
+        if event.type == INC_SPEED:
+            SPEED += 0.5      
+        if event.type == QUIT:
+            pygame.quit()
+            sys.exit()
+
+    DISPLAYSURFACE.fill(WHITE)
+    
+    scores = font_small.render(f"Score: {SCORE}", True, BLACK)
+    DISPLAYSURFACE.blit(scores, (10,10))
+
+    for entity in all_sprites:
+        DISPLAYSURFACE.blit(entity.image, entity.rect)
+        entity.move()
+
+    if pygame.sprite.spritecollideany(P1, enemies):
+        DISPLAYSURFACE.fill(RED)
+        DISPLAYSURFACE.blit(game_over, (90, 250))
+        pygame.display.update()
+        time.sleep(2)
+        pygame.quit()
+        sys.exit()        
+        
+    pygame.display.update()
+    FramePerSec.tick(FPS)
