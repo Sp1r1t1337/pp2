@@ -1,0 +1,4 @@
+name,email,birthday,group,phone,phone_type
+Alice Smith,alice@gmail.com,1990-01-01,Friend,+77011112233,mobile
+Bob Jones,bob@work.com,1985-12-12,Work,87272223344,work
+Mom,,1965-03-20,Family,+77079998877,home
